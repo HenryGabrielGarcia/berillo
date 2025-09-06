@@ -116,7 +116,7 @@ body {
     height: 100vh;
     background: 
         linear-gradient(rgba(46, 139, 87, 0.6), rgba(26, 82, 45, 0.6)),
-        url('Gemini_Generated_Image_lirbh9lirbh9lirb.png') center/cover no-repeat;
+        url('./Gemini_Generated_Image_lirbh9lirbh9lirb.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
