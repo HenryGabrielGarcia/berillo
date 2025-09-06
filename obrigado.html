@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! - Berillo Engenharia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--light-gray);
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .thank-you-container {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .thank-you-container h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .thank-you-container p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn-back-home {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-back-home:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Obrigado!</h1>
+        <p>Sua mensagem foi enviada com sucesso. A equipe da Berillo Engenharia entrará em contato com você em breve.</p>
+        <a href="index.html" class="btn-back-home">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>
