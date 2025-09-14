@@ -1,0 +1,127 @@
+/* Estilos específicos para a página de Engenharia Ambiental */
+
+.hero-small {
+    height: 50vh; /* Altura menor para páginas internas */
+    background: linear-gradient(rgba(26, 82, 45, 0.8), rgba(46, 139, 87, 0.8)),
+                url("../images/innovation_background.png") center/cover; /* Usando a imagem de fundo que o usuário gostou */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px; /* Para compensar o header fixo */
+}
+
+.hero-small .hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-small .hero-subtitle {
+    font-size: 1.1rem;
+}
+
+/* Services Detail Section */
+.services-detail {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.services-detail .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-detail .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.services-detail .section-description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.service-item-detail {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.service-item-detail h3 {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-green);
+    padding-bottom: 0.5rem;
+}
+
+.service-item-detail p {
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.service-item-detail ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.service-item-detail ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.service-item-detail ul li::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-green);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.service-item-detail strong {
+    color: var(--dark-green);
+}
+
+/* Responsive adjustments for internal pages */
+@media (max-width: 768px) {
+    .hero-small {
+        height: 40vh;
+        margin-top: 60px;
+    }
+
+    .hero-small .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-small .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .services-detail .section-title {
+        font-size: 2rem;
+    }
+
+    .service-item-detail {
+        padding: 1.5rem;
+    }
+
+    .service-item-detail h3 {
+        font-size: 1.5rem;
+    }
+}
+
