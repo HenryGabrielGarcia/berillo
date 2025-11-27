@@ -732,4 +732,152 @@ body {
     border-bottom: 2px solid var(--primary-green);
 }
 
+/* =========================
+   Páginas de Serviços
+   ========================= */
+.service-main {
+    padding-top: 6rem; /* espaço para o header fixo, se houver */
+    background: var(--light-gray);
+}
 
+.hero-servico {
+    background: linear-gradient(135deg, rgba(26, 82, 45, 0.92), rgba(46, 139, 87, 0.85));
+    color: var(--white);
+    padding: 5rem 0 4rem;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.hero-servico .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-servico {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-servico {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.destaques-servico {
+    padding: 3rem 0;
+}
+
+.destaques-servico .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card-servico {
+    background: var(--white);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--shadow);
+    flex: 1 1 260px;
+    max-width: 360px;
+}
+
+.card-servico h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-green);
+}
+
+.card-servico p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.98rem;
+}
+
+.porque-contratar,
+.como-funciona {
+    padding: 2.5rem 0;
+}
+
+.porque-contratar .container,
+.como-funciona .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.porque-contratar h2,
+.como-funciona h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark-green);
+}
+
+.porque-contratar p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.como-funciona ol {
+    margin-left: 1.2rem;
+    color: var(--dark-gray);
+    line-height: 1.8;
+}
+
+.como-funciona li {
+    margin-bottom: 0.4rem;
+}
+
+.cta-whats {
+    padding: 3rem 0 4rem;
+    text-align: center;
+    background: var(--white);
+}
+
+.cta-whats h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-green);
+}
+
+.btn-whats {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: #25D366;
+    color: var(--white);
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: var(--transition);
+}
+
+.btn-whats:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+    opacity: 0.95;
+}
+
+/* Responsivo para serviços */
+@media (max-width: 768px) {
+    .service-main {
+        padding-top: 5rem;
+    }
+
+    .titulo-servico {
+        font-size: 2.1rem;
+    }
+
+    .subtitulo-servico {
+        font-size: 1rem;
+    }
+
+    .card-servico {
+        max-width: 100%;
+    }
+}

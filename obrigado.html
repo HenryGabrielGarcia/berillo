@@ -1,68 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrigado! - Berillo Engenharia</title>
+    <title>Obrigado | Berillo Engenharia</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: var(--light-gray);
-            text-align: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-        .thank-you-container {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-        }
-        .thank-you-container h1 {
-            color: var(--primary-green);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .thank-you-container p {
-            color: var(--dark-gray);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .btn-back-home {
-            background: var(--primary-green);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-back-home:hover {
-            background: var(--dark-green);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
 </head>
-<body>
-    <div class="thank-you-container">
-        <h1>Obrigado!</h1>
-        <p>Sua mensagem foi enviada com sucesso. A equipe da Berillo Engenharia entrará em contato com você em breve.</p>
-        <a href="index.html" class="btn-back-home">Voltar para a Página Inicial</a>
-    </div>
-</body>
-</html>
 
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-cube"></i>
+                    <span>BERILLO</span>
+                </div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">HOME</a></li>
+                    <li><a href="#services" class="nav-link">SERVIÇOS</a></li>
+                    <!-- <li><a href="#projects" class="nav-link">PROJETOS</a></li> -->
+                    <li><a href="#about" class="nav-link">SOBRE NÓS</a></li>
+                    <li><a href="#contact" class="nav-link">CONTATO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="service-main">
+<section class="hero-servico">
+            <div class="container">
+                <h1 class="titulo-servico">Obrigado</h1>
+                <p class="subtitulo-servico">
+                    Soluções profissionais, rápidas e pensadas para atender exatamente o que sua empresa precisa.
+                </p>
+            </div>
+        </section>
+
+        <section class="destaques-servico">
+            <div class="container">
+
+                <div class="card-servico">
+                    <h3>✔ O que entregamos</h3>
+                    <p>
+                        • Entregáveis diretos e objetivos<br>
+                        • Documentos completos<br>
+                        • Atendimento profissional<br>
+                        • Resultados rápidos e mensuráveis
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <h3>✔ Benefícios</h3>
+                    <p>
+                        • Redução de custos<br>
+                        • Conformidade legal<br>
+                        • Agilidade operacional<br>
+                        • Processos otimizados
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <h3>✔ Para quem é</h3>
+                    <p>
+                        • Empresas<br>
+                        • Prefeituras<br>
+                        • Engenheiros e arquitetos<br>
+                        • Órgãos reguladores
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="porque-contratar">
+            <div class="container">
+                <h2>Por que contratar este serviço?</h2>
+                <p>
+                    Serviço de obrigado desenvolvido para oferecer segurança, agilidade e excelência técnica, garantindo resultados reais e confiáveis.
+                </p>
+            </div>
+        </section>
+
+        <section class="como-funciona">
+            <div class="container">
+                <h2>Como funciona</h2>
+                <ol>
+                    <li>Você entra em contato</li>
+                    <li>Analisamos sua demanda</li>
+                    <li>Executamos o serviço</li>
+                    <li>Entregamos com qualidade e dentro do prazo</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta-whats">
+            <div class="container">
+                <h2>Quer solicitar este serviço agora?</h2>
+                <a class="btn-whats" target="_blank" 
+                href="https://wa.me/5511978273749">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>BERILLO ENGENHARIA</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Berillo Engenharia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
