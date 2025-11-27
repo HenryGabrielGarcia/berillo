@@ -97,19 +97,6 @@
     color: var(--dark-green);
 }
 
-.service-item-detail h4 {
-    font-size: 1.3rem;
-    color: var(--dark-gray);
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-}
-
-.service-item-detail h3 i {
-    margin-right: 0.5rem;
-    color: var(--primary-green);
-}
-
 /* Responsive adjustments for internal pages */
 @media (max-width: 768px) {
     .hero-small {
@@ -150,4 +137,5 @@
     text-decoration: underline;
     color: var(--primary-green);
 }
+
 

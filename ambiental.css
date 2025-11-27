@@ -125,3 +125,17 @@
     }
 }
 
+
+
+
+.services-detail a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.services-detail a:hover {
+    text-decoration: underline;
+    color: var(--primary-green);
+}
+
+

@@ -84,41 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Formulário de contato
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validação básica
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-        
-        if (!name || !email || !message) {
-            showNotification('Por favor, preencha todos os campos.', 'error');
-            return;
-        }
-        
-        if (!isValidEmail(email)) {
-            showNotification('Por favor, insira um e-mail válido.', 'error');
-            return;
-        }
-        
-        // Simular envio do formulário
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'ENVIANDO...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
+
 
     // Efeito parallax sutil no hero
     window.addEventListener('scroll', function() {
@@ -268,12 +234,12 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-
- document.addEventListener('DOMContentLoaded', function() {
-     const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-      typeWriter(heroTitle, originalText, 80);
-    }
- });
+// Aplicar efeito de typing (descomente se desejar)
+// document.addEventListener('DOMContentLoaded', function() {
+//     const heroTitle = document.querySelector('.hero-title');
+//     if (heroTitle) {
+//         const originalText = heroTitle.textContent;
+//         typeWriter(heroTitle, originalText, 80);
+//     }
+// });
 
