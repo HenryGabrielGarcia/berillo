@@ -53,11 +53,14 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    gap: 0.5rem;
 }
 
-.nav-brand .logo i {
-    margin-right: 0.5rem;
-    font-size: 1.8rem;
+.logo-img {
+    height: 60px;
+    width: auto;
+    transform: scale(1.5);
+    transform-origin: left center;
 }
 
 .nav-menu ul {
@@ -499,6 +502,24 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
 }
+.about-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
 
 /* Animations */
 @keyframes fadeInUp {
@@ -626,8 +647,6 @@ body {
     }
 }
 
-
-
 /* Media Queries for Responsiveness */
 
 /* Tablets (e.g., iPads) */
@@ -644,9 +663,9 @@ body {
     }
 
     .nav-menu {
-        display: none; /* Hide by default */
+        display: none;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px;
         left: 0;
         width: 100%;
         background: var(--dark-green);
@@ -656,7 +675,7 @@ body {
     }
 
     .nav-menu.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
 
     .nav-menu ul {
@@ -665,7 +684,7 @@ body {
     }
 
     .nav-toggle {
-        display: flex; /* Show the hamburger menu */
+        display: flex;
     }
 
     .hero-title {
@@ -698,7 +717,7 @@ body {
 
 @media (max-width: 480px) {
     .services-grid {
-        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        grid-template-columns: 1fr;
     }
 
     .hero-title {
@@ -713,10 +732,6 @@ body {
         font-size: 2rem;
     }
 }
-
-
-
-
 
 /* Service Categories */
 .service-category {
@@ -736,7 +751,7 @@ body {
    Páginas de Serviços
    ========================= */
 .service-main {
-    padding-top: 6rem; /* espaço para o header fixo, se houver */
+    padding-top: 6rem;
     background: var(--light-gray);
 }
 
