@@ -17,10 +17,8 @@
         <div class="container">
             <div class="nav-brand">
                 <div class="logo">
-    <span>BERILO ENGENHARIA</span>
-</div>
-
-
+                    <span>BERILO ENGENHARIA</span>
+                </div>
             </div>
             <nav class="nav-menu" id="navMenu">
                 <ul>
@@ -55,7 +53,7 @@
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">NOSSOS SERVIÇOS</h2>
-                        <div class="service-category">
+            <div class="service-category">
                 <h3>🏗 Projetos</h3>
                 <div class="services-grid">
                     <div class="service-card">
@@ -377,39 +375,38 @@
 
 
     <!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="about-content">
-            
-            <div class="about-text">
-                <h2 class="section-title">SOBRE A BERILO</h2>
-                <p>
-                    Na Berilo, acreditamos que cada projeto é uma oportunidade de transformar espaços, cidades e
-                    vidas. Somos uma equipe multidisciplinar que une Engenharia Civil, Arquitetura, Urbanismo,
-                    Engenharia Ambiental e Design para criar soluções completas, inovadoras e sustentáveis.
-                    Nosso compromisso vai além da técnica: buscamos impacto positivo no meio ambiente, conforto e
-                    segurança para as pessoas, e soluções que respeitem a diversidade de necessidades e contextos.
-                    Cada projeto é pensado de forma integrada, considerando funcionalidade, estética,
-                    sustentabilidade e tecnologia.
-                </p>
-                <p>
-                    Combinamos experiência, criatividade e precisão, oferecendo desde estudos e projetos detalhados,
-                    até execução, acompanhamento de obras e licenciamento, sempre com transparência, ética e qualidade.
-                    Na Berilo, acreditamos que bom design, engenharia eficiente e responsabilidade ambiental caminham
-                    juntos. Seja na criação de um espaço residencial acolhedor, um empreendimento comercial inovador
-                    ou no planejamento urbano sustentável, nosso foco é entregar soluções que realmente fazem a diferença.
-                </p>
-                <p><b>Transformamos ideias em projetos, e projetos em realidade.</b></p>
-            </div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
 
-            
-            <div class="about-image">
-                <img src="Imagem do WhatsApp de 2025-11-28 à(s) 13.27.58_7c64e0aa.jpg" alt="Equipe Berilo Engenharia em projeto">
-            </div>
+                <div class="about-text">
+                    <h2 class="section-title">SOBRE A BERILO</h2>
+                    <p>
+                        Na Berilo, acreditamos que cada projeto é uma oportunidade de transformar espaços, cidades e
+                        vidas. Somos uma equipe multidisciplinar que une Engenharia Civil, Arquitetura, Urbanismo,
+                        Engenharia Ambiental e Design para criar soluções completas, inovadoras e sustentáveis.
+                        Nosso compromisso vai além da técnica: buscamos impacto positivo no meio ambiente, conforto e
+                        segurança para as pessoas, e soluções que respeitem a diversidade de necessidades e contextos.
+                        Cada projeto é pensado de forma integrada, incluindo funcionalidade, estética,
+                        sustentabilidade e tecnologia.
+                    </p>
+                    <p>
+                        Combinamos experiência, criatividade e precisão, oferecendo desde estudos e projetos detalhados,
+                        até execução, acompanhamento de obras e licenciamento, sempre com transparência, ética e qualidade.
+                        Na Berilo, acreditamos que bom design, engenharia eficiente e responsabilidade ambiental caminham
+                        juntos. Seja na criação de um espaço residencial acolhedor, um empreendimento comercial inovador
+                        ou no planejamento urbano sustentável, nosso foco é entregar soluções que realmente fazem a diferença.
+                    </p>
+                    <p><b>Transformamos ideias em projetos, e projetos em realidade.</b></p>
+                </div>
 
+                <div class="about-image">
+                    <img src="Imagem do WhatsApp de 2025-11-28 à(s) 13.27.58_7c64e0aa.jpg" alt="Equipe Berilo Engenharia em projeto">
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -417,9 +414,9 @@
             <h2 class="section-title">ENTRE EM CONTATO</h2>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form action="https://formsubmit.co/heneygamer12@gmail.com" method="POST">
+                    <!-- alterado para usar id e sem _next -->
+                    <form id="contact-form" action="https://formsubmit.co/heneygamer12@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://berilo.vercel.app/obrigado.html">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Seu Nome" required>
                         </div>
@@ -459,6 +456,15 @@
         </div>
     </section>
 
+    <!-- Modal de agradecimento -->
+    <div id="thankyou-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Obrigado pelo contato!</h2>
+            <p>Recebemos sua mensagem e em breve retornaremos.</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -486,4 +492,47 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const modal = document.getElementById("thankyou-modal");
+    const closeBtn = document.getElementById("close-modal");
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // impede o redirect padrão
+
+        const formData = new FormData(form);
+
+        try {
+            await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            form.reset();
+            modal.style.display = "flex"; // mostra o modal
+
+        } catch (error) {
+            alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
+        }
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+</script>
+
+   
 </body>
